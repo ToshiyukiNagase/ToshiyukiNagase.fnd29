@@ -1,0 +1,89 @@
+body {
+  background: #d0f7d4;
+  color: #fff;
+  font-family: "Arial Black";
+  font-style: 16px;
+}
+
+#container {
+  width: 225px;
+  margin: 0px auto;
+}
+
+#board {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0 0 8px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 4px;
+  border: 2px double #19b12d;
+}
+
+#board li.pressed {
+  background: #ccc;
+  box-shadow: none;
+  margin-top: 9px;
+  margin-bottom: 1px;
+}
+
+#board li {
+  background: #10a96c;
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 15px;
+  line-height: 40px;
+  text-align: center;
+  box-shadow: 0 4px 0 #0f6328;
+  user-select: none;
+
+}
+
+#timer {
+  margin-bottom: 8px;
+  font-size: 20px;
+  text-align: right;
+  position: relative;
+  top: 70px;
+  left: 100px;
+  color: #0f6328;
+}
+
+span {
+  color: #0f6328;
+  font-size: 20px;
+  position: relative;
+  top: 10px;
+  left: 250px;
+}
+
+#btn {
+  cursor: pointer;
+  user-select: none;
+  background: #f44336;
+  padding: 8px;
+  width: 200px;
+  ;
+  border-radius: 4px;
+  text-align: center;
+  box-shadow: 0 4px 0 #d1483e;
+  margin: auto;
+}
+
+#btn:active {
+  margin-top: 12px;
+  box-shadow: none;
+}
+
+#title {
+  margin: 0 auto;
+  text-align: center;
+  color: #0f6328;
+  font-family: 'Meiryo', 'メイリオ', sans-serif;
+  font-weight: bold;
+  font-size: 23px;
+  text-decoration: underline;
+}
