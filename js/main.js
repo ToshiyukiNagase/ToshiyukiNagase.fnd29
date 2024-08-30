@@ -8,10 +8,10 @@
     }
   }
 
-  function activete() {
+  function activate() {
     li = document.getElementById
-    liButons = document.querySelectorAll('li');
-    liButons.forEach((li, index) => {
+    liButtons = document.querySelectorAll('li');
+    liButtons.forEach((li, index) => {
     });
     // 乱数の生成 
     const randomNumber = [];
@@ -20,10 +20,10 @@
     }
     // ボタン初期化(ボタンに数字表示&pressed削除)
     for (let i = 0; i < 16; i++) {
-      liButons[i].textContent = randomNumber.splice(Math.floor(Math.random() * randomNumber.length), 1)[0];
+      liButtons[i].textContent = randomNumber.splice(Math.floor(Math.random() * randomNumber.length), 1)[0];
     }
     for (let i = 0; i < 16; i++) {
-      liButons[i].classList.remove('pressed');
+      liButtons[i].classList.remove('pressed');
     }
   }
 
@@ -37,10 +37,10 @@
   }
 
   function game() {
-    for (let i = 0; i < liButons.length; i++) {
+    for (let i = 0; i < liButtons.length; i++) {
       let pressedBtn;
-      liButons[i].addEventListener('click', () => {
-        // console.log("textContent= " + liButons[i].textContent);
+      liButtons[i].addEventListener('click', () => {
+        // console.log("textContent= " + liButtons[i].textContent);
         // console.log("i= " + i);
         // console.log("pressedBtn=" + pressedBtn);
         pressedBtn = document.querySelectorAll('li')[i];
@@ -53,27 +53,27 @@
 
           if (currentNum > 16) { //16
             clearTimeout(timeOutId);
-            cleard.currentTime = 0;
-            cleard.play();
-            //Game crear表示 
-            crearModal();
+            cleared.currentTime = 0;
+            cleared.play();
+            //Game clear表示 
+            clearModal();
           }
         }
       });
     }
   }
-  function crearModal() {
+  function clearModal() {
     modalRemove();
-    let dispClearTime = document.getElementById("timer").textContent;
-    let clearMessase = document.getElementById("score");
+    let ClearTimeDisplay = document.getElementById("timer").textContent;
+    let clearMessage = document.getElementById("score");
 
-    clearMessase.innerHTML = "Your clear Time is <strong><font size='20'>" +dispClearTime+"</font> </strong>seconds🕐";
+    clearMessage.innerHTML = "Your clear Time is <strong><font size='20'>" +ClearTimeDisplay+"</font> </strong>seconds🕐";
   }
 
   // ------↑Functions------------
 
   //  グローバル変数
-  let liButons = {};
+  let liButtons = {};
   let li = {};
   let startTime;
   let timeOutId;
@@ -82,8 +82,8 @@
   start.volume = 0.3;
   const collect = new Audio("audio/collect.mp3");
   collect.volume = 0.3;
-  const cleard = new Audio("audio/cleard.mp3");
-  cleard.volume = 0.3;
+  const cleared = new Audio("audio/cleard.mp3");
+  cleared.volume = 0.3;
 
   //ゲーム処理
   setup();  //初期化処理
@@ -99,7 +99,7 @@
     currentNum = 1;
     startTime = Date.now();
     runTimer();
-    activete();  //ボタン初期化
+    activate();  //ボタン初期化
     game(); //ゲーム制御
   });
 

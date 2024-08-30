@@ -1,12 +1,22 @@
 body {
   background: #d0f7d4;
   color: #fff;
-  font-family: "Arial Black";
-  font-style: 16px;
+  font-family: "Arial Black",Arial,sans-serif;
+  font-size: 35px;
+}
+
+#gameTitle {
+  font-size:30px;
+  color: #0f6328;
+  font-family: sans-serif,'Meiryo', Arial,'メイリオ', ;
+  text-align: center;
+  margin: 0 auto;
+  font-weight: bold;
+  font-size: 35px;
 }
 
 #container {
-  width: 225px;
+  width: 420px; 
   margin: 0px auto;
 }
 
@@ -17,47 +27,46 @@ body {
   margin: 0 0 8px;
   padding: 10px;
   background: #fff;
-  border-radius: 4px;
-  border: 2px double #19b12d;
+  border-radius: 10px;
 }
 
 #board li.pressed {
   background: #ccc;
   box-shadow: none;
-  margin-top: 9px;
-  margin-bottom: 1px;
+  margin-top: 14px;
+  margin-bottom: 5px;
 }
 
 #board li {
   background: #10a96c;
-  width: 40px;
-  height: 40px;
-  margin: 5px;
+  width: 80px;
+  height: 80px;
+  margin: 10px;
   cursor: pointer;
   border-radius: 15px;
   line-height: 40px;
   text-align: center;
+  display: grid;
+  place-items: center;
   box-shadow: 0 4px 0 #0f6328;
   user-select: none;
-
 }
 
 #timer {
-  margin-bottom: 8px;
-  font-size: 20px;
-  text-align: right;
+  margin-bottom: 0;
+  font-size: 45px;
   position: relative;
-  top: 70px;
-  left: 100px;
+  top: 50px;
+  left: 210px;
   color: #0f6328;
 }
 
 span {
   color: #0f6328;
-  font-size: 20px;
+  font-size: 30px;
   position: relative;
-  top: 10px;
-  left: 250px;
+  top: 0px;
+  left: 20px;
 }
 
 #btn {
@@ -78,12 +87,3 @@ span {
   box-shadow: none;
 }
 
-#title {
-  margin: 0 auto;
-  text-align: center;
-  color: #0f6328;
-  font-family: 'Meiryo', 'メイリオ', sans-serif;
-  font-weight: bold;
-  font-size: 23px;
-  text-decoration: underline;
-}
